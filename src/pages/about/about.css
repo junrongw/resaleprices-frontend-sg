@@ -1,0 +1,26 @@
+.about-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.about-page h2{
+    margin: 0.2em 0;
+}
+
+.about-chapter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+}
+
+.about-chapter p {
+    margin: 0.2em 0;
+}
+
+.bold-text{
+    font-weight: bold;
+}

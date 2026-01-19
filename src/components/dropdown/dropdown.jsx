@@ -35,7 +35,7 @@ const SearchableDropdown = ({ options, onSelect, placeholder}) => {
       {isOpen && (
         <ul className="dropdown">
           <input 
-            placeholder={"E.g: " + placeholder}
+            placeholder={"Search here - E.,g " + placeholder}
             onChange={(e) => {
               setSearch(e.target.value);
               setIsOpen(true);
