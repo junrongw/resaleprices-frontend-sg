@@ -51,7 +51,8 @@ function Homepage() {
     try {
       setLoading(true)
       setShowPrediction(true)
-      const res = await fetch("https://resale-price-deploy-507793504200.asia-southeast1.run.app/predict", {
+      const res = await 
+      fetch(`${import.meta.env.VITE_API_URL}/predict`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
