@@ -2,7 +2,6 @@ import { GoogleAuth } from 'google-auth-library';
 
 export default async function handler(req, res) {
   try {
-    console.log("TESTING")
     const payload = req.body;
 
     const auth = new GoogleAuth({
