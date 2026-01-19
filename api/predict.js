@@ -5,8 +5,7 @@ export default async function handler(req, res) {
     const payload = req.body;
 
     const auth = new GoogleAuth({
-      credentials: JSON.parse(process.env.GCP_API_KEY),
-      scopes: 'https://www.googleapis.com/auth/cloud-platform',
+      credentials: JSON.parse(process.env.GCP_API_KEY)
     });
 
     const url = process.env.VITE_API_URL + '/predict';
