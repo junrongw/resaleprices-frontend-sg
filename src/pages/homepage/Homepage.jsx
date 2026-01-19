@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './Homepage.css'
 import SearchableDropdown from '../../components/dropdown/dropdown'
-import { Link } from "react-router-dom";
 import NavHeader from '../../components/navHeader/navHeader';
 
 function Homepage() {
@@ -51,13 +50,18 @@ function Homepage() {
     try {
       setLoading(true)
       setShowPrediction(true)
-      const res = await 
+      // const res = await 
       // fetch(`${import.meta.env.VITE_API_URL}/predict`, {
-      fetch("https://resale-price-deploy-507793504200.asia-southeast1.run.app/predict", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(payload),
+      // });
+
+      const res = await fetch('/api/predict', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
 
