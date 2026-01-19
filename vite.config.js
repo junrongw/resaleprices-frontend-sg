@@ -13,5 +13,5 @@ import react from '@vitejs/plugin-react-swc'
 // Replace with your actual repo name
 export default defineConfig({
   plugins: [react()],
-  base: '/resaleprices-frontend-sg/',
+  base: '.',
 })

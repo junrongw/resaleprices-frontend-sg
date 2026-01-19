@@ -11,8 +11,8 @@ function App() {
     <>
       <div>
         <Routes>
-          <Route path="/resaleprices-frontend-sg" element={<Homepage />} />   
-          <Route path="/resaleprices-frontend-sg/about" element={<About />} />
+          <Route path="" element={<Homepage />} />   
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </>
