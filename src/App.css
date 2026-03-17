@@ -1,8 +1,13 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
+  background-color:burlywood
+}
+
+.nav{
+  z-index: 1;
 }
 
 .logo:hover {
@@ -10,21 +15,6 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-.form{
-  display: flex;
-  flex-direction: column;
-  row-gap: 1em;
-  align-items: center;
-  /* align-items: flex-start; */
-}
-
-.form label{
-  font-weight: bold;
-}
-.form input{
-  width: 20em;
 }
 
 @keyframes logo-spin {

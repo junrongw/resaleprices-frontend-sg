@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './Homepage.css'
 import SearchableDropdown from '../../components/dropdown/dropdown'
 import NavHeader from '../../components/navHeader/navHeader';
+import BackgroundPic from '../../assets/hdb_resale_background.png'
 
 function Homepage() {
 
@@ -90,8 +91,8 @@ function Homepage() {
 
   return (
     <>
-      <div>
-        <NavHeader />
+      {/* <div className='homepage-main'> */}
+        {/* <img src={BackgroundPic} className='background-pic'/> */}
         {showPrediction && prediction && !loading ? (
             <>
             <h2>Calculated Price: {prediction}</h2>
@@ -106,11 +107,12 @@ function Homepage() {
             </>
         ) : (
         <div className="form">
+          <NavHeader />
           {loading ? 
               <h1>Assessing...</h1>
             : 
             <>
-               <h1 className='form-title'>Find Your Suggested Resale Price!</h1> 
+                <h1 className='form-title'>Find Your Suggested Resale Price!</h1> 
                 <label>Area: </label>
                 <SearchableDropdown placeholder={"Bukit Batok"} options={towns} onSelect={setTown}/>
 
@@ -131,7 +133,7 @@ function Homepage() {
 
                 <button onClick={handleSubmit}>Price this!</button> 
                 {error && (
-                  <p>{error}</p>
+                  <p className='error-input'>{error}</p>
                 )}
             </>
           }
@@ -140,7 +142,7 @@ function Homepage() {
         </div>
         )}
        
-      </div>
+      {/* </div> */}
     </>
   )
 }
